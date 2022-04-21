@@ -2,10 +2,23 @@ body {
   margin: 0;
   padding: 50px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #3a745c;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
   color: #00b7ff;
+}
+
+nav {
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */

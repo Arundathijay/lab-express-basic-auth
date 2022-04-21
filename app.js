@@ -7,7 +7,8 @@ const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const serveFavicon = require('serve-favicon');
 const baseRouter = require('./routes/base');
-
+const expressSession = require('express-session');
+const Mongostore = require('connect-mongo');
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +29,16 @@ app.use(
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
+app.use(
+  expressSession({
+    secret: 'abcafsdfagfsafads',
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+      maxAge: 15 * 24 * 60 * 60 * 1000 // 15 days
+    }
+  })
+);
 
 app.use('/', baseRouter);
 

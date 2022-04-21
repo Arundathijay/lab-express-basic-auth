@@ -5,8 +5,19 @@ body {
   margin: 0;
   padding: 50px;
   font-family: $font-sans;
+  background-color: rgb(58, 116, 92);
+  justify-content: center;
+  align-items: center;
 }
 
 a {
   color: $link-color;
+}
+nav {
+  align-items: center;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  justify-content: space-between;
 }

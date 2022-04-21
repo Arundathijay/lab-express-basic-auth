@@ -1,13 +1,30 @@
-<!DOCTYPE html>
 <html>
 
-<head>
-  <title>Lab Express Basic Authentication</title>
-  <link rel='stylesheet' href='/styles/style.css' />
-</head>
+  <head>
+    <title>Lab Express Basic Authentication</title>
+    <link rel='stylesheet' href='/styles/style.css' />
+  </head>
 
-<body>
-  {{{body}}}
-</body>
+  <body>
+    <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+ <div class="container-fluid">
+       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <a class="navbar-brand" href='/'>Home</a>
+
+      {{#if user}}
+        <a class="nav-link" href='/profile'>{{user.username}}'s profile</a>
+      {{else}}
+        <a class="nav-link" href='/login'>Login</a>
+
+        <a class="nav-link" href='/signup'>Sign up</a>
+
+      {{/if}}
+    </nav>
+</div>
+</div>
+
+    {{{body}}}
+  </body>
 
 </html>
